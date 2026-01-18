@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emergency Service</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f3fff7]">
+
+<nav class="bg-white px-6 py-3 flex justify-between items-center shadow">
+  <div class="flex items-center gap-2">
+    <img src="assets/logo.png" class="w-8" />
+    <span class="font-semibold text-green-700">Emergency Service</span>
+  </div>
+
+  <div class="flex items-center gap-3">
+    <div class="px-3 py-1 bg-gray-100 rounded-full">❤️ <span id="heartCount">0</span></div>
+    <div class="px-3 py-1 bg-gray-100 rounded-full">🪙 <span id="coinCount">100</span></div>
+    <div class="px-4 py-1 bg-green-600 text-white rounded-full">📋 <span id="copyCount">0</span> Copy</div>
+  </div>
+</nav>
+
+<section class="bg-gradient-to-r from-green-900 to-green-700 text-white text-center py-14">
+  <img src="assets/coin.png" class="w-16 mx-auto mb-4" />
+  <h1 class="text-3xl font-bold">Emergency Service Directory</h1>
+  <p class="mt-3 text-sm max-w-2xl mx-auto">
+    Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh
+  </p>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-12 gap-6">
+
+  <div class="col-span-12 lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="cardContainer"></div>
+
+  <div class="col-span-12 lg:col-span-3 bg-white rounded-xl p-4">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="font-semibold">🕒 Call History</h3>
+      <button onclick="clearHistory()" class="bg-green-600 text-white px-3 py-1 rounded">Clear</button>
+    </div>
+    <ul id="historyList" class="space-y-2 text-sm"></ul>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
